@@ -1,0 +1,20 @@
+in web: http://localhost:8080/graphiql
+
+in graphql playground: http://localhost:8080/graphql
+
+
+mutation {
+  createVehicle(type: "car", modelCode: "XYZ0192", brandName: "XYZ", launchDate: "2016-08-16")
+  {
+    id
+  }
+}
+
+query {
+  vehicles(count: 1)
+  {
+    id,
+    type,
+    modelCode
+}
+}
